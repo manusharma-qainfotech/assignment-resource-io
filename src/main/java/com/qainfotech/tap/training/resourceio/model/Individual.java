@@ -13,9 +13,9 @@ public class Individual {
 	private final Boolean active;
 
 	public Individual(Map<String, Object> individualMap) {
-		 name = teamMap.get("name").toString();
-   id = (Integer) teamMap.get("id");
-   members = (List<Individual>) teamMap.get("members");
+		 	name = individualMap.get("name").toString();
+		id = (Integer) individualMap.get("id");
+		active = (Boolean) individualMap.get("active");
 	}
 
 	/**
