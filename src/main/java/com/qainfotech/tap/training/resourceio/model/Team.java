@@ -16,23 +16,9 @@ public class Team {
 	private final List<Individual> members;
 
 	public Team(Map<String, Object> teamMap) {
-         String name1= null;
-         Integer id1= null;
-		List<Individual> members1= null;
-
-		for (Map.Entry<String, Object> entry : teamMap.entrySet()) {
-			if (entry.getKey() == "name")
-				name1 = entry.getValue().toString();
-			if (entry.getKey() == "id")
-				id1 = (Integer) entry.getValue();
-			if (entry.getKey() == "members") 
-				members1 = (List<Individual>) entry.getValue();
-			
-		}
-		name = name1;
-		id = id1;
-		members = members1;
-
+       name = teamMap.get("name").toString();
+   id = (Integer) teamMap.get("id");
+   members = (List<Individual>) teamMap.get("members");
 	}
 
 	/**
